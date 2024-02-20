@@ -1,8 +1,14 @@
+interface propsType {
+  currentPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+}
+
 export default function Pagination({
   currentPage,
   totalPages = 5,
   onPageChange,
-}) {
+}: propsType) {
   const generateNumberOfPages = () => {
     const pages = [];
 
