@@ -7,7 +7,8 @@ export default function Products() {
     name: `Products ${index + 1}`,
   }));
 
-  const itemsPerPage: number = 18;
+  const itemsPerPage: number = 10;
+
   const [currentPage, setCurrentPage] = useState<number>(1);
 
   const indexOfLastItem = currentPage * itemsPerPage;
