@@ -1,4 +1,5 @@
 import "./App.css";
+import DigitalClock from "./components/DigitalClock/DigitalClock";
 import Pagination from "./components/pagination";
 import Products from "./components/pagination/ProductsPagination";
 
@@ -7,6 +8,7 @@ function App() {
     <>
       <main>
         <Products />
+        <DigitalClock />
       </main>
     </>
   );
