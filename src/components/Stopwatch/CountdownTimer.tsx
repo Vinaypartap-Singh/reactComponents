@@ -1,9 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 
-function CountdownTimer({ initialTime, onTimeFinish }) {
+interface propsType {
+  initialTime: number;
+  onTimeFinish: () => void;
+}
+
+function CountdownTimer({ initialTime, onTimeFinish }: propsType) {
   const [time, setTime] = useState(initialTime);
   const [isRunning, setIsRunning] = useState(true);
-  const intervalReference = useRef();
+  const intervalReference = useRef<NodeJS.Timeout | undefined>(undefined);
 
   useEffect(() => {
     if (isRunning) {
